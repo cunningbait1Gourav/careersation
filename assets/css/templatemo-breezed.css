@@ -122,6 +122,7 @@ global styles
 
 #program{
   text-align: center;
+  z-index:9999;
 }
 html,
 body {
@@ -929,6 +930,36 @@ ul.slick-dots {
   color:rgb(250, 248, 248);
   overflow:hidden;
   animation:fadeOutLeft 1s both;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.Modern-Slider .item h5 {
+  color: #fff;
+  /* font-family: monospace; */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /* margin: 0 auto; Gives that scrolling effect as the typing happens */
+  margin-left: 10rem;
+  margin-right: 14.8rem;  
+
+  letter-spacing: .12em; /* Adjust as needed */
+  animation: 
+    typing 10.5s steps(150),
+    blink-caret 0.7s infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 60% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
 .Modern-Slider .item h2{
   color: white;
@@ -943,9 +974,9 @@ ul.slick-dots {
   animation:fadeInDown 1s both 1s;
 }
 
-.Modern-Slider .item.slick-active h5{
+/* .Modern-Slider .item.slick-active h5{
   animation:fadeInLeft 1s both 1.5s;
-}
+} */
 
 .Modern-Slider .item.slick-active{
   animation:Slick-FastSwipeIn 1s both;
@@ -981,6 +1012,7 @@ about
 #about {
   padding: 100px 0px 0px 0px;
   position: relative;
+  top:50px;
   z-index: 9;
 }
 #about1{
@@ -1699,3 +1731,21 @@ portfolio
     margin-bottom: 0px;
   }
 }
+
+canvas{
+  position:inherit;
+  bottom:750px;
+  opacity: 0.6;
+}
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: relative;
+ height: 570px;
+}
+
+.topped{
+  position: relative;
+  z-index: 9999;
+}
+
